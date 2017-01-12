@@ -1,0 +1,47 @@
+search only for asset numbers and display the aset in asset view
+show all assets shipped by one person
+Filter:
+shipping person
+assetnumbers
+engineer
+customer
+
+
+print ups labels link to ups
+
+servicetools.starrag@gmail.com
+
+for printing reports
+befroe shipping add box quality to sending report
+after recieveing create recieve report
+shipping log export after each check out
+
+
+ability to select checked out item and autocheckin / pop up checkout box so it can be sent to a new customer without having to checkin and ten check out.
+
+Service Engineer list and email in scanAdd and scanRemove
+
+re assign asset from one customer to another without a check in
+
+
+
+
+PRINTING
+
+
+use table layout panel t ocreate reports,  new Print.PrintImg(TLP.tobitmap());
+
+make sure damaged tool cannot be checked out
+
+
+aditional kits need check to macke sure they are in check in list and not added twice
+
+add remote support for shippnig omputer to be able to update softwre
+kodi
+
+
+EMAIL SHIPPING LABEL TO PERSON WHO SHIPPED SERVICE TOOL
+
+
+XXXXXADD CHECK BEFROE SHIPPING LABEL PRINT TO POP UP MESSAGE BOX TO AS KUSER IF SHIPPING NIFORMATION IS CORRECT
+

@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F0CDF0A-24CB-4D78-BE4E-775CBD17025C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Asset_Managment</RootNamespace>
+    <AssemblyName>Asset Managment</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Dakirby309-Windows-8-Metro-Drives-Globe-Metro.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>22966A9835A41F358AE5968345CDB7F61D1FD860</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Asset Managment_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EMXShipping">
+      <HintPath>..\..\..\..\SHIPPING APIs\C-Sharp\Bin\EMXShipping.dll</HintPath>
+    </Reference>
+    <Reference Include="ShippingAPI">
+      <HintPath>..\..\UPS_API\UPS_API\bin\x86\Release\ShippingAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="ShippingAPI.XmlSerializers">
+      <HintPath>..\..\UPS_API\UPS_API\bin\x86\Release\ShippingAPI.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAdditionalKit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAdditionalKit.Designer.cs">
+      <DependentUpon>AddAdditionalKit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAsset.Designer.cs">
+      <DependentUpon>AddAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCustomer.Designer.cs">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addEngineer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addEngineer.Designer.cs">
+      <DependentUpon>addEngineer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addShipper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addShipper.Designer.cs">
+      <DependentUpon>addShipper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetView.Designer.cs">
+      <DependentUpon>AssetView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Avery5160StickerTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Avery5160StickerTemplate.Designer.cs">
+      <DependentUpon>Avery5160StickerTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Avery5160_BARCODE_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Avery5160_BARCODE_Template.Designer.cs">
+      <DependentUpon>Avery5160_BARCODE_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DescriptionLabelPrinterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DescriptionLabelPrinterForm.Designer.cs">
+      <DependentUpon>DescriptionLabelPrinterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralSettings.Designer.cs">
+      <DependentUpon>GeneralSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetRateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetRateForm.Designer.cs">
+      <DependentUpon>GetRateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGO.Designer.cs">
+      <DependentUpon>LOGO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotifiationViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotifiationViewer.Designer.cs">
+      <DependentUpon>NotifiationViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackingListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackingListForm.Designer.cs">
+      <DependentUpon>PackingListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintAssetLabels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintAssetLabels.Designer.cs">
+      <DependentUpon>PrintAssetLabels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintBarcodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintBarcodes.Designer.cs">
+      <DependentUpon>PrintBarcodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintReceivingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintReceivingReport.Designer.cs">
+      <DependentUpon>PrintReceivingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceivingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivingReport.Designer.cs">
+      <DependentUpon>ReceivingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanAction.Designer.cs">
+      <DependentUpon>ScanAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanAdd.Designer.cs">
+      <DependentUpon>ScanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScannerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScannerSettings.Designer.cs">
+      <DependentUpon>ScannerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanRemove.Designer.cs">
+      <DependentUpon>ScanRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchResults.Designer.cs">
+      <DependentUpon>SearchResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shippingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shippingForm.Designer.cs">
+      <DependentUpon>shippingForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddAdditionalKit.resx">
+      <DependentUpon>AddAdditionalKit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAsset.resx">
+      <DependentUpon>AddAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addCustomer.resx">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addEngineer.resx">
+      <DependentUpon>addEngineer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addShipper.resx">
+      <DependentUpon>addShipper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetView.resx">
+      <DependentUpon>AssetView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Avery5160StickerTemplate.resx">
+      <DependentUpon>Avery5160StickerTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Avery5160_BARCODE_Template.resx">
+      <DependentUpon>Avery5160_BARCODE_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DescriptionLabelPrinterForm.resx">
+      <DependentUpon>DescriptionLabelPrinterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralSettings.resx">
+      <DependentUpon>GeneralSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetRateForm.resx">
+      <DependentUpon>GetRateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGO.resx">
+      <DependentUpon>LOGO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotifiationViewer.resx">
+      <DependentUpon>NotifiationViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackingListForm.resx">
+      <DependentUpon>PackingListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintAssetLabels.resx">
+      <DependentUpon>PrintAssetLabels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintBarcodes.resx">
+      <DependentUpon>PrintBarcodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintReceivingReport.resx">
+      <DependentUpon>PrintReceivingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReceivingReport.resx">
+      <DependentUpon>ReceivingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanAction.resx">
+      <DependentUpon>ScanAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanAdd.resx">
+      <DependentUpon>ScanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScannerSettings.resx">
+      <DependentUpon>ScannerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanRemove.resx">
+      <DependentUpon>ScanRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shippingForm.resx">
+      <DependentUpon>shippingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Asset Managment_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dakirby309-Windows-8-Metro-Drives-Globe-Metro.ico" />
+    <None Include="Resources\STARRAG.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
